@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>University Management System</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: #f4f6f9;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #1e2a38;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .sidebar button {
+      width: 100%;
+      padding: 12px;
+      background: none;
+      border: none;
+      color: white;
+      text-align: left;
+      cursor: pointer;
+      font-size: 15px;
+      border-left: 4px solid transparent;
+    }
+
+    .sidebar button:hover {
+      background: #2f3e50;
+      border-left: 4px solid #00bcd4;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>U M S</h2>
+
+    <button onclick="show('home')">🏠 Home</button>
+    <button onclick="show('portal')">🎓 Student Portal</button>
+    <button onclick="show('course')">📚 Course Registration</button>
+    <button onclick="show('result')">📊 Results</button>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+
+    <div id="home" class="card active">
+      <h1>Welcome</h1>
+      <p>University Management System Dashboard</p>
+    </div>
+
+    <div id="portal" class="card">
+      <h1>Student Portal</h1>
+      <p>Login system, profile info, attendance data show here.</p>
+    </div>
+
+    <div id="course" class="card">
+      <h1>Course Registration</h1>
+      <p>Select courses and register your subjects here.</p>
+    </div>
+
+    <div id="result" class="card">
+      <h1>Results</h1>
+      <p>Student marks, GPA and transcript will be shown here.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function show(id) {
+      let cards = document.querySelectorAll(".card");
+      cards.forEach(c => c.classList.remove("active"));
+
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
