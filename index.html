@@ -1,149 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>seetara g Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babar Akram | Portfolio</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+    <link rel="stylesheet" href="style.css">
 
-body{
-display:flex;
-height:100vh;
-background:#f4f4f4;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.sidebar{
-width:280px;
-background:#1e293b;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-.sidebar img{
-width:120px;
-height:120px;
-border-radius:50%;
-margin-bottom:15px;
-}
-
-.sidebar h2{
-margin-bottom:5px;
-}
-
-.sidebar p{
-font-size:14px;
-margin-bottom:20px;
-}
-
-.sidebar button{
-width:100%;
-padding:12px;
-margin:5px 0;
-border:none;
-background:#334155;
-color:white;
-cursor:pointer;
-border-radius:5px;
-}
-
-.sidebar button:hover{
-background:#475569;
-}
-
-.content{
-flex:1;
-padding:30px;
-}
-
-.section{
-display:none;
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.active{
-display:block;
-}
-</style>
+    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <div class="sidebar">
 
-<img src="https://via.placeholder.com/120" alt="Profile">
+    <div class="profile">
 
-<h2>seetara g</h2>
-<p>ID: 22-SE-001</p>
+        <img src="profile.jpg" alt="Profile">
 
-<button onclick="show('about')">About</button>
-<button onclick="show('education')">Education</button>
-<button onclick="show('skills')">Skills</button>
-<button onclick="show('projects')">Projects</button>
-<button onclick="show('contact')">Contact</button>
+        <h2>Babar Akram</h2>
 
-</div>
+        <p>Computer Science Student</p>
 
-<div class="content">
+        <span>COMSATS University Vehari Campus</span>
 
-<div id="about" class="section active">
-<h2>About Me</h2>
-<p>BS computer science Student.</p>
-</div>
+    </div>
 
-<div id="education" class="section">
-<h2>Education</h2>
-<p><b>Matric:</b> 2022</p>
-<p><b>Intermediate:</b> Aspire college Vehari Campus</p>
-<p><b>BS computer science:</b> 3th Semester</p>
-<p><b>CGPA:</b> 3.41</p>
-</div>
+    <ul class="menu">
 
-<div id="skills" class="section">
-<h2>Skills</h2>
-<ul>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-<li>SQL</li>
-<li>Java</li>
-</ul>
-</div>
+        <li onclick="showSection('home')">🏠 Home</li>
 
-<div id="projects" class="section">
-<h2>Projects</h2>
-<ul>
-<li>University Management System</li>
-<li>Course Registration Portal</li>
-<li>Online Paper Management System</li>
-</ul>
-</div>
+        <li onclick="showSection('education')">🎓 Education</li>
 
-<div id="contact" class="section">
-<h2>Contact</h2>
-<p>Email: seetara g@gmail.com</p>
-<p>Phone: 03157540218</p>
-</div>
+        <li onclick="showSection('skills')">💻 Skills</li>
+
+        <li onclick="showSection('projects')">🚀 Projects</li>
+
+        <li onclick="showSection('contact')">📞 Contact</li>
+
+    </ul>
 
 </div>
 
-<script>
-function show(id){
-let sections=document.querySelectorAll('.section');
-sections.forEach(sec=>sec.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-}
-</script>
+
+<div class="main-content">
+
+    <section id="home" class="section active">
+
+        <h1>Hello, I'm Babar Akram</h1>
+
+        <h3>Web Developer & Website Creator</h3>
+
+        <p>
+            Passionate Computer Science student with strong interest in
+            Web Development, Software Engineering and Database Systems.
+        </p>
+
+        <div class="info-cards">
+
+            <div class="card">
+                <h2>Semester</h2>
+                <p>3rd Semester</p>
+            </div>
+
+            <div class="card">
+                <h2>CGPA</h2>
+                <p>3.04</p>
+            </div>
+
+            <div class="card">
+                <h2>University</h2>
+                <p>COMSATS Vehari</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="education" class="section">
+
+        <h1>Education</h1>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Matric</h3>
+                <p>Government Higher Secondary School Luddan</p>
+                <span>2022</span>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Intermediate</h3>
+                <p>KIPS College Vehari Campus</p>
+                <span>2024</span>
+            </div>
+
+            <div class="timeline-item">
+                <h3>BS Computer Science</h3>
+                <p>COMSATS University Vehari Campus</p>
+                <span>3rd Semester</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="skills" class="section">
+
+        <h1>Skills</h1>
+
+        <div class="skill">
+
+            <h4>Website Creator</h4>
+            <div class="bar"><span style="width:95%"></span></div>
+
+            <h4>Web Development</h4>
+            <div class="bar"><span style="width:90%"></span></div>
+
+            <h4>HTML & CSS</h4>
+            <div class="bar"><span style="width:92%"></span></div>
+
+            <h4>JavaScript</h4>
+            <div class="bar"><span style="width:80%"></span></div>
+
+        </div>
+
+    </section>
+
+
+    <section id="projects" class="section">
+
+        <h1>Projects</h1>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>University Management System</h3>
+                <p>Database based management system project.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Online Paper Management System</h3>
+                <p>Portal for paper management and records.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Course Registration Portal</h3>
+                <p>Student course registration web portal.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="section">
+
+        <h1>Contact</h1>
+
+        <div class="contact-box">
+
+            <p>📧 babarakram339@gmail.com</p>
+
+            <p>📱 03345458844</p>
+
+            <p>📍 Vehari, Pakistan</p>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
-  </html>
+</html>
