@@ -1,0 +1,8 @@
+console.log("Pro Blog Loaded");
+
+// simple interaction
+document.querySelectorAll(".post").forEach(p => {
+  p.addEventListener("click", () => {
+    alert("Open full article page (next upgrade step)");
+  });
+});
