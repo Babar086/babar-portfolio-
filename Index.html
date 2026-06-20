@@ -1,122 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>University Management System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Muzammil Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-    body {
-      display: flex;
-      height: 100vh;
-      background: #f4f6f9;
-    }
+body{
+display:flex;
+height:100vh;
+background:#f4f4f4;
+}
 
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background: #1e2a38;
-      color: white;
-      padding-top: 20px;
-    }
+.sidebar{
+width:280px;
+background:#1e293b;
+color:white;
+padding:20px;
+text-align:center;
+}
 
-    .sidebar h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
+.sidebar img{
+width:120px;
+height:120px;
+border-radius:50%;
+margin-bottom:15px;
+}
 
-    .sidebar button {
-      width: 100%;
-      padding: 12px;
-      background: none;
-      border: none;
-      color: white;
-      text-align: left;
-      cursor: pointer;
-      font-size: 15px;
-      border-left: 4px solid transparent;
-    }
+.sidebar h2{
+margin-bottom:5px;
+}
 
-    .sidebar button:hover {
-      background: #2f3e50;
-      border-left: 4px solid #00bcd4;
-    }
+.sidebar p{
+font-size:14px;
+margin-bottom:20px;
+}
 
-    /* Main content */
-    .main {
-      flex: 1;
-      padding: 30px;
-    }
+.sidebar button{
+width:100%;
+padding:12px;
+margin:5px 0;
+border:none;
+background:#334155;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: none;
-    }
+.sidebar button:hover{
+background:#475569;
+}
 
-    .active {
-      display: block;
-    }
+.content{
+flex:1;
+padding:30px;
+}
 
-    h1 {
-      margin-bottom: 15px;
-    }
-  </style>
+.section{
+display:none;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.active{
+display:block;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>U M S</h2>
+<div class="sidebar">
 
-    <button onclick="show('home')">🏠 Home</button>
-    <button onclick="show('portal')">🎓 Student Portal</button>
-    <button onclick="show('course')">📚 Course Registration</button>
-    <button onclick="show('result')">📊 Results</button>
-  </div>
+<img src="https://via.placeholder.com/120" alt="Profile">
 
-  <!-- Main -->
-  <div class="main">
+<h2>Muhammad Muzammil</h2>
+<p>ID: 22-SE-001</p>
 
-    <div id="home" class="card active">
-      <h1>Welcome</h1>
-      <p>University Management System Dashboard</p>
-    </div>
+<button onclick="show('about')">About</button>
+<button onclick="show('education')">Education</button>
+<button onclick="show('skills')">Skills</button>
+<button onclick="show('projects')">Projects</button>
+<button onclick="show('contact')">Contact</button>
 
-    <div id="portal" class="card">
-      <h1>Student Portal</h1>
-      <p>Login system, profile info, attendance data show here.</p>
-    </div>
+</div>
 
-    <div id="course" class="card">
-      <h1>Course Registration</h1>
-      <p>Select courses and register your subjects here.</p>
-    </div>
+<div class="content">
 
-    <div id="result" class="card">
-      <h1>Results</h1>
-      <p>Student marks, GPA and transcript will be shown here.</p>
-    </div>
+<div id="about" class="section active">
+<h2>About Me</h2>
+<p>BS Software Engineering Student.</p>
+</div>
 
-  </div>
+<div id="education" class="section">
+<h2>Education</h2>
+<p><b>Matric:</b> 2022</p>
+<p><b>Intermediate:</b> KIPS College Vehari Campus</p>
+<p><b>BS Software Engineering:</b> 4th Semester</p>
+<p><b>CGPA:</b> 3.21</p>
+</div>
 
-  <script>
-    function show(id) {
-      let cards = document.querySelectorAll(".card");
-      cards.forEach(c => c.classList.remove("active"));
+<div id="skills" class="section">
+<h2>Skills</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>SQL</li>
+<li>Java</li>
+</ul>
+</div>
 
-      document.getElementById(id).classList.add("active");
-    }
-  </script>
+<div id="projects" class="section">
+<h2>Projects</h2>
+<ul>
+<li>University Management System</li>
+<li>Course Registration Portal</li>
+<li>Online Paper Management System</li>
+</ul>
+</div>
+
+<div id="contact" class="section">
+<h2>Contact</h2>
+<p>Email: muzammildoultana036@gmail.com</p>
+<p>Phone: 03096813216</p>
+</div>
+
+</div>
+
+<script>
+function show(id){
+let sections=document.querySelectorAll('.section');
+sections.forEach(sec=>sec.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
